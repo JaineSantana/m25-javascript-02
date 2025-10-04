@@ -14,6 +14,10 @@
             font-size: medium;
             color: blue;
         }
+        /*  Configuração especial para o parágrafo que esta na secao-02 mas é filho direto */
+        #secao-02 > p {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -22,6 +26,16 @@
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque odio eius minima. Doloremque officia illo minus natus nulla incidunt nemo tempore est qui perspiciatis at non, exercitationem impedit illum quasi!
             </p>
+        </section>
+        <section id="secao-02">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nulla aliquid beatae cumque numquam laudantium, iste odit? A, dolores praesentium quo atque, excepturi ducimus nobis veniam aperiam, commodi reiciendis labore?
+            </p>
+            <section>
+                <p>
+                    teste
+                </p>
+            </section>
         </section>
     </main>
 </body>
