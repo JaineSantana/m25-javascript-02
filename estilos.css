@@ -1,0 +1,103 @@
+/* ====== ESTILOS GERAIS ====== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* ====== HEADER ====== */
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00c4cc;
+}
+
+/* ====== MAIN ====== */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Seletores de tag + pseudo-classe */
+section p:first-child {
+    font-weight: bold;
+    color: #0077b6;
+}
+
+/* Combinadores */
+section > img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+h2 + p {
+    color: #555;
+}
+
+h2 ~ p {
+    font-style: italic;
+}
+
+/* ====== ASIDE ====== */
+aside {
+    background-color: #e6f7ff;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 850px;
+    border-left: 5px solid #00a8e8;
+}
+
+aside ul li:hover {
+    background-color: #d0f0ff;
+    cursor: pointer;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #00c4cc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
