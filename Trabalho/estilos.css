@@ -6,6 +6,9 @@ body {
     background-color: #f8f8f8;
     color: #333;
 }
+p {
+    text-align: justify;
+}
 
 /* ====== HEADER ====== */
 header {
@@ -15,23 +18,23 @@ header {
     text-align: center;
 }
 
-nav ul {
+.menu ul {
     list-style: none;
     padding: 0;
 }
 
-nav li {
+.menu li {
     display: inline-block;
     margin: 0 15px;
 }
 
-nav a {
+.menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
+.menu a:hover {
     color: #00c4cc;
 }
 
