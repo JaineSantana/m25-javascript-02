@@ -11,7 +11,7 @@ p {
 }
 
 /* ====== HEADER ====== */
-header {
+#header {
     background-color: #222;
     color: white;
     padding: 20px;
@@ -84,7 +84,6 @@ aside {
 
 aside ul li:hover {
     background-color: #d0f0ff;
-    cursor: pointer;
 }
 
 /* ====== FOOTER ====== */
@@ -93,7 +92,12 @@ footer {
     color: #ddd;
     text-align: center;
     padding: 20px;
+    padding-left:5px ;
     font-size: 0.9em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 footer a {
@@ -104,3 +108,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
