@@ -1,0 +1,10 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "descricao": "produto teste",
+      "saldo": "10",
+      "preco": "10"
+    }
+  ]
+}
