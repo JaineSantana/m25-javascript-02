@@ -12,16 +12,17 @@ const maior_id = () => {
 }
 
 const gravar = () => {
-
+    //inibir o botão de gravar e reset do para o usuario nao clicar enquanto grava
+    document.getElementById("modal-cadastro").classList.add("show");
     //buscando os dados do formulário
     const id = document.querySelector("#id").value;
     const descricao = document.querySelector("#iddesc").value;
-    const saldo = document.querySelector("#idsaldo").value;
-    const preco = document.querySelector("#idpreco").value;
+    const saldo = parseInt(document.querySelector("#idsaldo").value);
+    const preco = parseFloat(document.querySelector("#idpreco").value);
     //Montando o JSON para gravar
     maior_id().then((ret)=>{
         const dados = {
-        "id": (id == "null" ? ret+1 : id),
+        "id": ""+(id == "null" ? parseInt(ret) + 1 : parseInt(id)),
         "descricao": descricao,
         "saldo": saldo,
         "preco": preco
@@ -39,6 +40,18 @@ const gravar = () => {
     })
     
 }
+
+const carregar = async () => {
+    const parametros = new URLSearchParams(window.location.search);
+    const id = parametros.get("id");
+    if (id){
+        document.getElementById("id").value = id;
+        const res = await axios.get("http://localhost:3000/produtos/"+id);
+        document.getElementById("iddesc").value= res.data.descricao;
+        document.getElementById("idpreco").value= res.data.preco;
+        document.getElementById("idsaldo").value= res.data.saldo;
+    }
+}
 //Colocando os eventos no formulario
 const form = document.querySelector('form');
 form.addEventListener('submit',function (e){
@@ -50,5 +63,9 @@ form.addEventListener('submit',function (e){
     setTimeout(()=>{
         window.location.href = "index.html";
     },3000);
+})
+// Colocando um evento de carregamento da página
+document.addEventListener("DOMContentLoaded",function(){
+    carregar();
 })
 
